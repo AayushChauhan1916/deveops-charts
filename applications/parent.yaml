@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/ishan706045-design/charts
+    repoURL: https://github.com/AayushChauhan1916/deveops-charts
     targetRevision: main
     path: applications
   destination:
