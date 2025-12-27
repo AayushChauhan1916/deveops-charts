@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name:  k8-final-prod
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ishan706045-design/charts.git
+    targetRevision: main
+    path: backend
+    helm:
+      valueFiles:
+        - values-production.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: production
+  syncPolicy: {}
