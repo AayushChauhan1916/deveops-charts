@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/AayushChauhan1916/deveops-charts
     targetRevision: main
-    path: backend
+    path: services/backend
     helm:
       valueFiles:
         - values-staging.yaml
