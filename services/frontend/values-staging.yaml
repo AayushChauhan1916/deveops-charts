@@ -1,9 +1,9 @@
 replicaCount: 1
 
 image:
-  repository: asia-south1-docker.pkg.dev/learning-481011/learning/frontend-stag
-  tag: latest
+  repository: asia-south1-docker.pkg.dev/learning-481011/learning/frontend-prod
   pullPolicy: Always
+  tag: 98d7082
 
 resources:
   requests:
