@@ -11,7 +11,7 @@ spec:
     path: services/frontend
     helm:
       valueFiles:
-        - values.staging.yaml
+        - values-staging.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: staging
