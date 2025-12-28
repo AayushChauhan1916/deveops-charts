@@ -34,10 +34,7 @@ env:
   - name: PORT
     value: "8080"
   - name: JWT_SECRET
-    valueFrom:
-      secretKeyRef:
-        name: { { include "app.secretName" . } }
-        key: JWT_SECRET
+    secretKey: JWT_SECRET
 hpa:
   enabled: true
   minReplicas: 1
