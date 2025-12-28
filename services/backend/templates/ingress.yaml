@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: app-ingress
+  name: {{ include "my-express-app.fullname" . }}-ingress
   annotations:
     kubernetes.io/ingress.class: "gce"
 spec:
@@ -9,20 +9,18 @@ spec:
     - host: ""
       http:
         paths:
-          # Backend API
           - path: /api
             pathType: Prefix
             backend:
               service:
-                name: backend-service
+                name: {{ include "my-express-app.fullname" . }}
                 port:
-                  number: 3000
+                  number: {{ .Values.service.port }}
 
-          # Frontend App
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: frontend-service
+                name: {{ .Values.frontend.serviceName }}
                 port:
-                  number: 80
+                  number: {{ .Values.frontend.port }}

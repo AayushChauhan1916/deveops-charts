@@ -46,3 +46,6 @@ backendConfig:
   port: 8080
 secrets:
   jwtSecretKey: JWT_SECRET_PROD
+frontend:
+  serviceName: frontend-production-my-frontend-app
+  port: 80
