@@ -1,10 +1,16 @@
 replicaCount: 1
 
 image:
-  repository: asia-south1-docker.pkg.dev/learning-481011/learning/frontend-stag
-  tag: latest
+  repository: asia-south1-docker.pkg.dev/learning-481011/learning/frontend-prod
   pullPolicy: Always
-
+  tag: 98d7082
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+ingress:
+  enabled: true
+  host: ""
 resources:
   requests:
     cpu: 100m
