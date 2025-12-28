@@ -47,5 +47,5 @@ backendConfig:
 secrets:
   jwtSecretKey: JWT_SECRET_STAG
 frontend:
-  serviceName: frontend-staging-my-frontend-app
+  serviceName: frontend-staging-frontend 
   port: 80
